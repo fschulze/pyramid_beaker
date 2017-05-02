@@ -345,12 +345,20 @@ class TestCacheConfiguration(unittest.TestCase):
         self.assertFalse(default_term.get('enabled'))
 
 class TestIncludeMe(unittest.TestCase):
-    def test_includeme(self):
-        from pyramid.interfaces import ISessionFactory
+    def setUp(self):
         from pyramid import testing
+        self.config = testing.setUp()
+    
+    def _callFUT(self, config):
         from pyramid_beaker import includeme
-        config = testing.setUp(settings={})
-        includeme(config)
-        session_factory = config.registry.queryUtility(ISessionFactory)
-        self.assertEqual(str(session_factory),
-                "<class 'pyramid_beaker.PyramidBeakerSessionObject'>")
+        return includeme(self.config)
+
+    def test_it(self):
+        from pyramid.interfaces import ISessionFactory
+        from pyramid_beaker import BeakerSessionFactoryConfig
+        self._callFUT(self.config)
+        session_factory = self.config.registry.queryUtility(ISessionFactory)
+        self.assertEqual(
+                            str(session_factory), 
+                            str(BeakerSessionFactoryConfig())
+                            )

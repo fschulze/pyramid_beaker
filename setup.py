@@ -19,7 +19,7 @@ from setuptools import find_packages
 
 here = os.path.abspath(os.path.dirname(__file__))
 try:
-    README = open(os.path.join(here, 'README.txt')).read()
+    README = open(os.path.join(here, 'README.rst')).read()
     CHANGES = open(os.path.join(here, 'CHANGES.txt')).read()
 except:
     README = ''
@@ -46,10 +46,14 @@ setup(name='pyramid_beaker',
         "Intended Audience :: Developers",
         "Programming Language :: Python",
         "Programming Language :: Python :: 2",
-        "Programming Language :: Python :: 2.6",
         "Programming Language :: Python :: 2.7",
         "Programming Language :: Python :: 3",
-        "Programming Language :: Python :: 3.2",
+        "Programming Language :: Python :: 3.7",
+        "Programming Language :: Python :: 3.8",
+        "Programming Language :: Python :: 3.9",
+        "Programming Language :: Python :: 3.10",
+        "Programming Language :: Python :: 3.11",
+        "Programming Language :: Python :: 3.12",
         "Programming Language :: Python :: Implementation :: CPython",
         "Programming Language :: Python :: Implementation :: PyPy",
         "Framework :: Pyramid",

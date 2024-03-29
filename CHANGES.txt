@@ -1,5 +1,5 @@
-unreleased
-----------
+0.9 (2024-03-29)
+----------------
 
  - Fixed a bug causing session saving even when it is not needed. See
    https://github.com/Pylons/pyramid_beaker/pull/28

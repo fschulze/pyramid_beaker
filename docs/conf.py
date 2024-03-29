@@ -49,7 +49,7 @@ copyright = '2012-%s, Agendaless Consulting <chrism@plope.com>' % thisyear
 # other places throughout the built documents.
 #
 # The short X.Y version.
-version = '0.8'
+version = '0.9'
 # The full version, including alpha/beta/rc tags.
 release = version
 

@@ -39,7 +39,7 @@ testing_extras = [
     ]
 
 setup(name='pyramid_beaker',
-      version='0.8',
+      version='0.9',
       description='Beaker session factory backend for Pyramid',
       long_description=README + '\n\n' +  CHANGES,
       classifiers=[
